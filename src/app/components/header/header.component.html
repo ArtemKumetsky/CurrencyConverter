@@ -5,4 +5,13 @@
       CurrConv
     </span>
   </a>
+  <div class="header-title">
+    The best currency converter!
+  </div>
+  <div class="header-currency">
+    <div class="currency-element" *ngFor="let curr of exchangeRates">
+      <span>{{curr.cc}}</span>
+      <span>{{curr.rate.toFixed(2) + " UAH"}}</span>
+    </div>
+  </div>
 </header>
