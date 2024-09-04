@@ -1,0 +1,16 @@
+header {
+  background: var(--mainBgColor);
+  padding: 10px;
+  a {
+    text-decoration: none;
+    color: var(--mainTextColor);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 150px;
+    border: 1px solid red;
+  }
+  img {
+    width: 75px;
+  }
+}
