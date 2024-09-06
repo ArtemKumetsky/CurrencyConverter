@@ -43,10 +43,10 @@ export class ConverterComponent implements OnInit {
   convert(from: string): void {
     if (from === 'first') {
       const rate = this.exchangeRates[this.firstCurrency] / this.exchangeRates[this.secondCurrency];
-      this.secondAmount = parseFloat((this.firstAmount * rate).toFixed(2));
+      this.secondAmount = parseFloat((this.firstAmount * rate).toFixed(3));
     } else {
       const rate = this.exchangeRates[this.secondCurrency] / this.exchangeRates[this.firstCurrency];
-      this.firstAmount = parseFloat((this.secondAmount * rate).toFixed(2));
+      this.firstAmount = parseFloat((this.secondAmount * rate).toFixed(3));
     }
   }
 }

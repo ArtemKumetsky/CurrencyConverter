@@ -1,19 +1,28 @@
 <div class="converter">
-  <div>
-    <input type="number" min="0" [(ngModel)]="firstAmount" (input)="convert('first')" />
-    <select [(ngModel)]="firstCurrency" (change)="convert('first')">
-      <option *ngFor="let currency of currencies" [value]="currency.cc">
-        {{ currency.txt }}
-      </option>
-    </select>
-  </div>
-
-  <div>
-    <input type="number" min="0" [(ngModel)]="secondAmount" (input)="convert('second')" />
-    <select [(ngModel)]="secondCurrency" (change)="convert('second')">
-      <option *ngFor="let currency of currencies" [value]="currency.cc">
-        {{ currency.txt }}
-      </option>
-    </select>
+  <h2>Converter</h2>
+  <div class="converter-content">
+    <div class="converter-el">
+      <div>
+        <label for="converter-from">From</label>
+        <input id="converter-from" type="number" min="0" [(ngModel)]="firstAmount" (input)="convert('first')" />
+      </div>
+      <select [(ngModel)]="firstCurrency" (change)="convert('first')">
+        <option *ngFor="let currency of currencies" [value]="currency.cc">
+          {{ currency.txt }}
+        </option>
+      </select>
+    </div>
+    <hr>
+    <div class="converter-el">
+      <div>
+        <label for="converter-to">To</label>
+        <input id="converter-to" type="number" min="0" [(ngModel)]="secondAmount" (input)="convert('second')" />
+      </div>
+      <select [(ngModel)]="secondCurrency" (change)="convert('second')">
+        <option *ngFor="let currency of currencies" [value]="currency.cc">
+          {{ currency.txt }}
+        </option>
+      </select>
+    </div>
   </div>
 </div>
