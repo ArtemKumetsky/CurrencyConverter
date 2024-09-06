@@ -19,7 +19,6 @@ export class HeaderComponent implements OnInit {
     this.exchangeRateService.getExchangeRates().subscribe(
       (data) => {
         this.exchangeRates = data.filter((item: { cc: string; }) => item.cc === "USD" || item.cc === "EUR");
-        console.log(this.exchangeRates)
       },
       (error) => {
         console.error('Error fetching exchange rates', error);

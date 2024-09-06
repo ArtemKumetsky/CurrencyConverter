@@ -9,9 +9,9 @@
     The best currency converter!
   </div>
   <div class="header-currency">
-    <div class="currency-element" *ngFor="let curr of exchangeRates">
-      <span>{{curr.cc}}</span>
-      <span>{{curr.rate.toFixed(2) + " UAH"}}</span>
+    <div class="currency-element" *ngFor="let item of exchangeRates">
+      <span>{{item.cc}}</span>
+      <span>{{item.rate.toFixed(2) + " UAH"}}</span>
     </div>
   </div>
 </header>

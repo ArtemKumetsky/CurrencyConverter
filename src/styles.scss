@@ -1,4 +1,5 @@
 :root {
+  --mainHeaderColor: #3e3e3e;
   --mainBgColor: #494949;
   --mainTextColor: whitesmoke;
 }
@@ -7,4 +8,5 @@ html, body {
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+  background: var(--mainBgColor);
 }
